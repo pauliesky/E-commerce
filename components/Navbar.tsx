@@ -8,6 +8,7 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { useState } from "react";
 
@@ -21,7 +22,7 @@ const Navbar = () => {
     <>
       <div className=' bg-[#000000] flex flex-row justify-end'>
         <div className=" flex w-full justify-evenly max-w-[989px] items-center " >
-          <p className="text-[14px] font-[400] leading-[21px]  text-[#FAFAFA]">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span className="pl-2 underline font-[600]">ShopNow</span></p>
+          <p className="text-[14px] font-[400] leading-[21px] font-poppins text-[#FAFAFA]">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span className="pl-2 underline font-[600]">ShopNow</span></p>
           <FormControl >
             <Select
               value={language}
@@ -42,13 +43,14 @@ const Navbar = () => {
 
       </div>
       <div className="flex flex-row mt-[38px] justify-between border-b pb-[23px] items-center px-[135px]">
-        <p className="font-[Inter] text-[24px] font-[700]" >Exclusive</p>
+        <p className="font-inter text-[24px] font-[700]" >Exclusive</p>
         <div className="flex max-w-[367px] w-full justify-evenly">
           <p>Home</p>
           <p>Contact</p>
           <p>About</p>
           <p>Sign Up</p>
         </div>
+        <div className="flex items-center">
           <Paper
             component="form"
             sx={{
@@ -65,6 +67,11 @@ const Navbar = () => {
               <SearchIcon />
             </IconButton>
           </Paper>
+          <div className="flex gap-[16px] ml-[24px]">
+            <FavoriteBorderIcon />
+            <ShoppingCartOutlinedIcon />
+          </div>
+        </div>
       </div>
     </>
   )
